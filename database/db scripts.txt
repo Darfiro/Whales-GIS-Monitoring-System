@@ -1,0 +1,75 @@
+USE [GIS]
+GO
+
+delete from whales_chip
+delete from whales_meeting
+delete from whales_specie
+delete from whales
+delete from chip_location
+delete from chip
+delete from meetings
+delete from scientists
+delete from species
+
+BULK INSERT species FROM 'C:\Users\dvfir\Documents\3 course\Базы данных\курсовая\бд\species.csv' WITH (FIELDTERMINATOR = ',')
+GO
+
+Select *
+From species
+Go
+
+BULK INSERT whales FROM 'C:\Users\dvfir\Documents\3 course\Базы данных\курсовая\бд\whales.csv' WITH (FIELDTERMINATOR = ',')
+GO
+
+Select *
+From whales
+Go
+
+BULK INSERT whales_specie FROM 'C:\Users\dvfir\Documents\3 course\Базы данных\курсовая\бд\whales_specie.csv' WITH (FIELDTERMINATOR = ',')
+GO
+
+Select *
+From whales_specie
+Go
+
+BULK INSERT chip FROM 'C:\Users\dvfir\Documents\3 course\Базы данных\курсовая\бд\chip.csv' WITH (FIELDTERMINATOR = ',')
+GO
+
+Select *
+From chip
+Go
+
+BULK INSERT whales_chip FROM 'C:\Users\dvfir\Documents\3 course\Базы данных\курсовая\бд\whales_chip.csv' WITH (FIELDTERMINATOR = ',')
+GO
+
+Select *
+From whales_chip
+Go
+
+BULK INSERT chip_location FROM 'C:\Users\dvfir\Documents\3 course\Базы данных\курсовая\бд\chip_location.csv' WITH (FIELDTERMINATOR = ',')
+GO
+
+Select *
+From chip_location
+Go
+
+BULK INSERT meetings FROM 'C:\Users\dvfir\Documents\3 course\Базы данных\курсовая\бд\meetings.csv' WITH (FIELDTERMINATOR = ',')
+GO
+
+Select *
+From meetings
+Go
+
+BULK INSERT whales_meeting FROM 'C:\Users\dvfir\Documents\3 course\Базы данных\курсовая\бд\whales_meeting.csv' WITH (FIELDTERMINATOR = ',')
+GO
+
+Select *
+From whales_meeting
+Go
+
+BULK INSERT scientists FROM 'C:\Users\dvfir\Documents\3 course\Базы данных\курсовая\бд\scientists.csv' WITH (FIELDTERMINATOR = ',')
+GO
+
+Select *
+From scientists
+Go

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses">
+  <DataContextMoniker Name="/DataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="60286caa-6788-4dba-a78c-08a81ab15d63" absoluteBounds="0.5, 2.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesDataContext/whales" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd839927-23d5-4ea3-ab6b-b2d649250847" absoluteBounds="0.51499999999999968, 2.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="df29991f-a39e-478c-b3b6-b3104d980640" absoluteBounds="0.5, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClassesDataContext/whales_chip" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f00d09c1-d491-43f7-9166-6adca14b7203" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 2.25); (1.5 : 1.8862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/whales/whales_whales_chip" />
+      <nodes>
+        <classShapeMoniker Id="60286caa-6788-4dba-a78c-08a81ab15d63" />
+        <classShapeMoniker Id="df29991f-a39e-478c-b3b6-b3104d980640" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="eab5eb52-a522-43fb-8a0e-0db515f3f60a" absoluteBounds="0.5, 4.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClassesDataContext/whales_meeting" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bce5c1a2-fd62-43b8-b852-478aac9d6042" absoluteBounds="0.51500000000000012, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 3.82859537760417); (1.5 : 4.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/whales/whales_whales_meeting" />
+      <nodes>
+        <classShapeMoniker Id="60286caa-6788-4dba-a78c-08a81ab15d63" />
+        <classShapeMoniker Id="eab5eb52-a522-43fb-8a0e-0db515f3f60a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="09f896a4-c536-4c1b-9b04-7d3b5d8a5cc7" absoluteBounds="2.875, 2.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClassesDataContext/whales_specie" />
+      <nestedChildShapes>
+        <elementListCompartment Id="643a5c57-9bc4-4a7c-9146-1a3e9b86aad0" absoluteBounds="2.8899999999999997, 2.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 3.06814697265625); (2.875 : 3.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/whales/whales_whales_specie" />
+      <nodes>
+        <classShapeMoniker Id="60286caa-6788-4dba-a78c-08a81ab15d63" />
+        <classShapeMoniker Id="09f896a4-c536-4c1b-9b04-7d3b5d8a5cc7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ae0f5d0b-61c7-4a39-8535-1953286321ac" absoluteBounds="5.5, 2.375, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DataClassesDataContext/species" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0be2b09d-e16d-4215-a027-6e85b33cb427" absoluteBounds="5.515, 2.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 3.1050439453125); (4.875 : 3.1050439453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/species/species_whales_specie" />
+      <nodes>
+        <classShapeMoniker Id="ae0f5d0b-61c7-4a39-8535-1953286321ac" />
+        <classShapeMoniker Id="09f896a4-c536-4c1b-9b04-7d3b5d8a5cc7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9fff90f7-a621-4950-baa2-7c87157d4510" absoluteBounds="5.5, 4.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DataClassesDataContext/scientists" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aee2030f-acb9-4d81-a01c-73bc05e0facf" absoluteBounds="5.515, 5.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="206bdbba-24e3-4b22-b18f-a6c4e07fff7d" absoluteBounds="3, 4.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DataClassesDataContext/meetings" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d17c5edc-42bc-4038-8020-290e7ab54cea" absoluteBounds="3.015, 5.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 5.13064697265625); (2.5 : 5.13064697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/meetings/meetings_whales_meeting" />
+      <nodes>
+        <classShapeMoniker Id="206bdbba-24e3-4b22-b18f-a6c4e07fff7d" />
+        <classShapeMoniker Id="eab5eb52-a522-43fb-8a0e-0db515f3f60a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.73159912109375); (5 : 5.73159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/scientists/scientists_meetings" />
+      <nodes>
+        <classShapeMoniker Id="9fff90f7-a621-4950-baa2-7c87157d4510" />
+        <classShapeMoniker Id="206bdbba-24e3-4b22-b18f-a6c4e07fff7d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a190b57b-f307-47d0-b291-7c4511dde150" absoluteBounds="5.5, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataClassesDataContext/chip_location" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ca445676-4dc9-4eb4-b35a-f306533e9a8f" absoluteBounds="5.515, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c749893-6a8b-4c07-9920-7961a59700c2" absoluteBounds="3, 0.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClassesDataContext/chip" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b2b7ab4-6e58-4aea-a1a9-87ab1459d68d" absoluteBounds="3.015, 1.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 1.25564697265625); (2.5 : 1.25564697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/chip/chip_whales_chip" />
+      <nodes>
+        <classShapeMoniker Id="3c749893-6a8b-4c07-9920-7961a59700c2" />
+        <classShapeMoniker Id="df29991f-a39e-478c-b3b6-b3104d980640" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5 : 1.31814697265625); (5.5 : 1.31814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/chip/chip_chip_location" />
+      <nodes>
+        <classShapeMoniker Id="3c749893-6a8b-4c07-9920-7961a59700c2" />
+        <classShapeMoniker Id="a190b57b-f307-47d0-b291-7c4511dde150" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

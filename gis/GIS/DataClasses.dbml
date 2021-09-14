@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GIS" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=desktop-3ou1766;Initial Catalog=GIS;Integrated Security=True" SettingsObjectName="GIS.Properties.Settings" SettingsPropertyName="GISConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.whales" Member="whales">
+    <Type Name="whales">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="gender" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="weight" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="whales_whales_chip" Member="whales_chip" ThisKey="id" OtherKey="whale_id" Type="whales_chip" />
+      <Association Name="whales_whales_meeting" Member="whales_meeting" ThisKey="id" OtherKey="whale_id" Type="whales_meeting" />
+      <Association Name="whales_whales_specie" Member="whales_specie" ThisKey="id" OtherKey="whale_id" Type="whales_specie" />
+    </Type>
+  </Table>
+  <Table Name="dbo.whales_chip" Member="whales_chip">
+    <Type Name="whales_chip">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="whale_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="chip_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="whales_whales_chip" Member="whales" ThisKey="whale_id" OtherKey="id" Type="whales" IsForeignKey="true" />
+      <Association Name="chip_whales_chip" Member="chip" ThisKey="chip_id" OtherKey="id" Type="chip" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.whales_meeting" Member="whales_meeting">
+    <Type Name="whales_meeting">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="whale_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="meeting_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="whales_whales_meeting" Member="whales" ThisKey="whale_id" OtherKey="id" Type="whales" IsForeignKey="true" />
+      <Association Name="meetings_whales_meeting" Member="meetings" ThisKey="meeting_id" OtherKey="id" Type="meetings" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.whales_specie" Member="whales_specie">
+    <Type Name="whales_specie">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="whale_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="specie_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="whales_whales_specie" Member="whales" ThisKey="whale_id" OtherKey="id" Type="whales" IsForeignKey="true" />
+      <Association Name="species_whales_specie" Member="species" ThisKey="specie_id" OtherKey="id" Type="species" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.species" Member="species">
+    <Type Name="species">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="latin_name" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="specie_name" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="areal" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="population" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="dangers" Type="System.String" DbType="NChar(1000)" CanBeNull="true" />
+      <Column Name="color" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="species_whales_specie" Member="whales_specie" ThisKey="id" OtherKey="specie_id" Type="whales_specie" />
+    </Type>
+  </Table>
+  <Table Name="dbo.scientists" Member="scientists">
+    <Type Name="scientists">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fullname" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="login" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="register_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Association Name="scientists_meetings" Member="meetings" ThisKey="id" OtherKey="scientist_id" Type="meetings" />
+    </Type>
+  </Table>
+  <Table Name="dbo.meetings" Member="meetings">
+    <Type Name="meetings">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="latitude" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="longitude" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="pond_name" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="date_spotted" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="scientist_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="meetings_whales_meeting" Member="whales_meeting" ThisKey="id" OtherKey="meeting_id" Type="whales_meeting" />
+      <Association Name="scientists_meetings" Member="scientists" ThisKey="scientist_id" OtherKey="id" Type="scientists" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.chip_location" Member="chip_location">
+    <Type Name="chip_location">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="latitude" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="longitude" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="date_located" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="chip_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="chip_chip_location" Member="chip" ThisKey="chip_id" OtherKey="id" Type="chip" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.chip" Member="chip">
+    <Type Name="chip">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="date_start" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="date_finish" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="chip_whales_chip" Member="whales_chip" ThisKey="id" OtherKey="chip_id" Type="whales_chip" />
+      <Association Name="chip_chip_location" Member="chip_location" ThisKey="id" OtherKey="chip_id" Type="chip_location" />
+    </Type>
+  </Table>
+</Database>
